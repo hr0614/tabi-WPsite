@@ -1,0 +1,300 @@
+@charset "UTF-8";
+/* Theme Name: tabi illustrasion 
+Description: wordpress original theme 
+Author: rotz 
+Version: 1.0 */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.layout-wrapper {
+  height: calc(100vh - 200px);
+  background-color: #ffffff;
+}
+
+#page-top {
+  text-align: center;
+  position: relative;
+  background-color: #EEEEEE;
+}
+
+.main-illust {
+  width: auto;
+  position: relative;
+}
+.main-illust img {
+  height: 100vh;
+}
+.main-illust .white-gradation {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  background-image: linear-gradient(180deg, transparent 0 75%, #FFF 100%);
+}
+
+.contents-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.contents-wrapper .contents-box {
+  color: #AAB8C9;
+  padding: 30px 0;
+  position: relative;
+}
+.contents-wrapper .contents-box h2 {
+  font-family: "Bad Script", cursive;
+  font-size: 48px;
+  text-align: center;
+  border-bottom: 2px solid;
+  padding: 20px 0;
+  margin-bottom: 32px;
+}
+.contents-wrapper .contents-box h4 {
+  font-size: 20px;
+  font-family: "Kiwi Maru", serif;
+  display: inline-block;
+  border-bottom: 1px dotted #89a9c1;
+}
+.contents-wrapper .contents-box h4 span {
+  font-size: 18px;
+}
+.contents-wrapper .contents-box .original-illust {
+  padding-bottom: 20px;
+}
+.contents-wrapper .contents-box .works-illust .works-items {
+  position: relative;
+}
+.contents-wrapper .contents-box .works-illust .works-items .works-deta {
+  width: calc(100% - 10px);
+  position: absolute;
+  bottom: 0px;
+  background-color: white;
+  opacity: 0.8;
+  border-radius: 0 0 10px 10px;
+  font-size: 14px;
+  font-family: "Kiwi Maru", serif;
+  padding: 5px;
+}
+.contents-wrapper .contents-box .works-list {
+  margin-top: 60px;
+}
+.contents-wrapper .contents-box .works-list .list-wrapper {
+  padding-top: 15px;
+}
+.contents-wrapper .contents-box .works-list .toggle {
+  display: none;
+}
+.contents-wrapper .contents-box .works-list .Label {
+  /*タイトル*/
+  padding: 0.5em;
+  display: block;
+  color: #ffffff;
+  background: #dbe6e9;
+}
+.contents-wrapper .contents-box .works-list .Label::before {
+  /*タイトル横の矢印*/
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  -webkit-transform: rotate(45deg);
+  position: absolute;
+  top: calc(50% - 3px);
+  right: 20px;
+  transform: rotate(135deg);
+}
+.contents-wrapper .contents-box .works-list .Label,
+.contents-wrapper .contents-box .works-list .content {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: all 0.3s;
+}
+.contents-wrapper .contents-box .works-list .content {
+  /*本文*/
+  height: 0;
+  margin-bottom: 10px;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.contents-wrapper .contents-box .works-list .post-list {
+  height: 150px;
+  overflow: auto;
+}
+.contents-wrapper .contents-box .works-list .toggle:checked + .Label + .content {
+  /*開閉時*/
+  height: auto;
+  padding: 20px;
+  transition: all 0.3s;
+}
+.contents-wrapper .contents-box .works-list .toggle:checked + .Label {
+  color: #fff;
+  background: #9fbfd2;
+}
+.contents-wrapper .contents-box .works-list .toggle:checked + .Label::before {
+  transform: rotate(-45deg) !important;
+}
+.contents-wrapper .contents-box .contact-text {
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+.contents-wrapper .contents-box .contact-text p {
+  text-align: center;
+}
+.contents-wrapper .contents-box .contact-text .mail {
+  font-size: 20px;
+}
+.contents-wrapper .contents-box .contact-text .attention {
+  padding-bottom: 15px;
+}
+.contents-wrapper .contents-box .contact-text .attention p {
+  display: inline;
+  font-size: 18px;
+  color: rgb(196, 94, 94);
+  border-bottom: 1px solid;
+}
+.contents-wrapper .contents-box .contact-text .attention p:hover {
+  opacity: 0.5;
+}
+.contents-wrapper .contents-box .contact-text .attention span {
+  font-size: 14px;
+}
+.contents-wrapper .contents-box .sns-icons {
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 0 15px;
+}
+.contents-wrapper .contents-box .sns-icons i {
+  font-size: 50px;
+}
+.contents-wrapper .contents-box .sns-icons i:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.contents-wrapper .more-icon {
+  width: 140px;
+  position: absolute;
+  font-family: "Bad Script", cursive;
+  color: #8cb6c8;
+  font-size: 25px;
+  bottom: 40px;
+  right: 0px;
+  text-decoration-style: dotted;
+}
+.contents-wrapper .more-icon:hover {
+  opacity: 0.5;
+}
+
+#work .more-icon {
+  top: 530px;
+  right: 0px;
+}
+
+.works-list li:hover {
+  opacity: 0.5;
+}
+
+.contents-text {
+  padding: 60px 40px 60px 40px;
+  background-color: #F0F4F6;
+  display: flex;
+  align-items: center;
+}
+.contents-text .prof-icon {
+  width: 160px;
+  margin-right: 20px;
+}
+.contents-text h3 {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Kiwi Maru", serif;
+  line-height: 1.8;
+  text-align: left;
+}
+.contents-text p {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Kiwi Maru", serif;
+  line-height: 1.8;
+  text-align: left;
+}
+.contents-text li {
+  font-size: 18px;
+  font-family: "Kiwi Maru", serif;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.contents-text a {
+  text-decoration: none;
+  color: #AAB8C9;
+}
+
+.content {
+  padding: 20px 0;
+  font-family: "Kiwi Maru", serif;
+}
+.content li {
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.post-container {
+  margin: 30px 0;
+  padding: 30px 40px;
+  background-color: #F0F4F6;
+  font-family: "Kiwi Maru", serif;
+  line-height: 1.8;
+  text-align: left;
+}
+.post-container img {
+  display: flex;
+  max-width: 400px;
+  max-height: 500px;
+  padding: 20px 0;
+}
+.post-container .wp-element-caption {
+  display: none;
+}
+
+.post-contents {
+  display: inline;
+  cursor: pointer;
+  border-bottom: 1px solid;
+}
+
+#information li {
+  margin-bottom: 15px;
+}
+#information li:hover {
+  opacity: 0.5;
+}
+
+.info-contents {
+  width: 60%;
+  height: 70%;
+  padding: 50px;
+  align-items: center;
+  justify-content: center;
+  font-family: "Kiwi Maru", serif;
+  color: #AAB8C9;
+  background-color: #F0F4F6;
+}
+
+.post-date {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.post-title {
+  display: inline-block;
+}/*# sourceMappingURL=style.css.map */

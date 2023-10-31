@@ -1,0 +1,75 @@
+@media only screen and (max-width: 480px) {
+  .main-illust img {
+    height: auto;
+    width: 100%;
+  }
+  #nav-toggle {
+    width: 40px;
+    height: 40px;
+  }
+  #nav-toggle > div {
+    top: 13px;
+  }
+  #nav-toggle span {
+    width: 20px;
+    height: 2px;
+    left: calc(50% - 10px);
+  }
+  #nav-toggle span:nth-child(2) {
+    top: 6px;
+  }
+  #nav-toggle span:nth-child(3) {
+    top: 13px;
+  }
+  .open #nav-toggle span:nth-child(1) {
+    top: 7px;
+    transform: rotate(45deg);
+  }
+  .open #nav-toggle span:nth-child(2) {
+    width: 0;
+    left: 50%;
+  }
+  .open #nav-toggle span:nth-child(3) {
+    top: 7px;
+    transform: rotate(-45deg);
+  }
+  .contents-wrapper {
+    width: 90%;
+  }
+  .contents-wrapper .contents-box h2 {
+    font-size: 38px;
+    padding: 20px 0;
+    margin-bottom: 22px;
+  }
+  .contents-wrapper .contents-box .contents-text {
+    padding: 30px 40px 60px 40px;
+    flex-flow: column;
+  }
+  .contents-wrapper .contents-box .contents-text h3 {
+    text-align: center;
+  }
+  .contents-wrapper .contents-box .contents-text .prof-icon {
+    width: 100px;
+  }
+  .contents-wrapper .contents-box .contents-text p {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Kiwi Maru", serif;
+    text-align: left;
+  }
+  .contents-wrapper .contents-box .contents-text li {
+    font-size: 16px;
+    font-family: "Kiwi Maru", serif;
+    margin-bottom: 10px;
+  }
+  .contents-wrapper .contents-box .contents-text .contact-text p {
+    text-align: center;
+    font-size: 14px;
+  }
+  .contents-wrapper .contents-box .contents-text .contact-text .mail {
+    font-size: 16px;
+  }
+  .post-contents {
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=responsive.css.map */
