@@ -74,7 +74,7 @@ Version: 1.0 */
       font-size: 20px;
       font-family: 'Kiwi Maru', serif;
       display: inline-block;
-      border-bottom: 1px dotted #89a9c1;
+      border-bottom: 2px dotted #AAB8C9;
 
       span {
         font-size: 18px;
@@ -202,6 +202,7 @@ Version: 1.0 */
           font-size: 18px;
           color: rgb(196, 94, 94);
           border-bottom: 1px solid;
+          cursor: pointer;
 
           &:hover {
             opacity: 0.5;
@@ -350,7 +351,7 @@ Version: 1.0 */
 
   img {
     display: flex;
-    max-width: 400px;
+    width: auto;
     max-height: 500px;
     padding: 20px 0;
   }
@@ -364,15 +365,20 @@ Version: 1.0 */
 .post-contents {
   display: inline;
   cursor: pointer;
-  border-bottom: 1px solid;
 }
 
+.post-border {
+  border-bottom: solid 1px;
+  margin: 10px 0;
+}
+
+
 #information li {
-  margin-bottom: 15px;
 
   &:hover {
     opacity: 0.5;
   }
+
 }
 
 .info-contents {

@@ -63,11 +63,11 @@
       }
 
       .contents-text {
-        padding: 30px 40px 60px 40px;
+        padding: 25px 20px 50px 20px;
         flex-flow: column;
 
-        // align-items: center;
         h3 {
+          font-size: 25px;
           text-align: center;
         }
 
@@ -84,28 +84,32 @@
         }
 
         li {
-          font-size: 16px;
+          font-size: 13px;
           font-family: 'Kiwi Maru', serif;
           // line-height: 1.8;
-          margin-bottom: 10px;
+          // margin-bottom: 5px;
         }
 
-        .contact-text {
-
-          p {
-            text-align: center;
-            font-size: 14px;
-          }
-
-          .mail {
-            font-size: 16px;
-          }
-
+        p {
+          text-align: center;
+          font-size: 15px;
         }
+
+        .mail {
+          font-size: 16px;
+        }
+
+
       }
     }
   }
 
+  #work {
+    .more-icon {
+      top: 460px;
+      right: 0px;
+    }
+  }
 
 
   .post-contents {

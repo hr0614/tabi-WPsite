@@ -42,10 +42,11 @@
     margin-bottom: 22px;
   }
   .contents-wrapper .contents-box .contents-text {
-    padding: 30px 40px 60px 40px;
+    padding: 25px 20px 50px 20px;
     flex-flow: column;
   }
   .contents-wrapper .contents-box .contents-text h3 {
+    font-size: 25px;
     text-align: center;
   }
   .contents-wrapper .contents-box .contents-text .prof-icon {
@@ -58,16 +59,19 @@
     text-align: left;
   }
   .contents-wrapper .contents-box .contents-text li {
-    font-size: 16px;
+    font-size: 13px;
     font-family: "Kiwi Maru", serif;
-    margin-bottom: 10px;
   }
-  .contents-wrapper .contents-box .contents-text .contact-text p {
+  .contents-wrapper .contents-box .contents-text p {
     text-align: center;
-    font-size: 14px;
+    font-size: 15px;
   }
-  .contents-wrapper .contents-box .contents-text .contact-text .mail {
+  .contents-wrapper .contents-box .contents-text .mail {
     font-size: 16px;
+  }
+  #work .more-icon {
+    top: 460px;
+    right: 0px;
   }
   .post-contents {
     font-size: 15px;

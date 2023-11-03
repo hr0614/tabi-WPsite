@@ -48,15 +48,15 @@
           <div class="text-wrapper">
             <h3>
               <?php 
-                $targetID = 78;
-                $postContent = get_post_field('post_content', $targetID);
+                $pageInfo = get_page_by_path("ニックネーム", OBJECT, "profile");
+                $postContent = get_post_field('post_content', $pageInfo->ID);
                 echo wp_strip_all_tags($postContent);
               ?>
             </h3>
             <?php 
-            $targetID = 79;
-            $postContent = get_post_field('post_content', $targetID);
-            echo $postContent;
+              $pageInfo = get_page_by_path("プロフィール文", OBJECT, "profile");
+              $postContent = get_post_field('post_content', $pageInfo->ID);
+              echo $postContent;
             ?>
           </div>
         </div>
@@ -68,7 +68,7 @@
           'posts_per_page' => 5
         );
         $articles = new WP_Query($args);
-        echo '<script>console.log(' . json_encode($articles) . ');</script>';
+        // echo '<script>console.log(' . json_encode($articles) . ');</script>';
       ?>
 
       <?php
@@ -92,6 +92,7 @@
                     <div class='post-date'>" . date("Y-m-d", strtotime($post->post_date)) . "</div>
                     <div class='post-title'>$post->post_title</div>
                   </div>
+                  <div class='post-border'></div>
                 </li>";
             }
           ?>
@@ -198,6 +199,7 @@
                               
                               <div class='post-title'>$post->post_title</div>
                             </div>
+                            <div class='post-border'></div>
                           </li>";
                         }
                       }
@@ -239,13 +241,13 @@
           <div class="contact-text">
             <div class="attention"><p class="alert-text" data-micromodal-trigger="modal-attention" href=""><i class="fa-solid fa-triangle-exclamation"></i>ご依頼について<span>※必ずお読み下さい</span></p></div>
             <?php 
-              $targetID = 83;
-              $postContent = get_post_field('post_content', $targetID);
+              $pageInfo = get_page_by_path("コンタクト本文", OBJECT, "contact");
+              $postContent = get_post_field('post_content', $pageInfo->ID);
               echo $postContent;
             ?>
-            <p class="mail"><?php 
-                $targetID = 84;
-                $postContent = get_post_field('post_content', $targetID);
+            <p class="mail"><?php
+                $pageInfo = get_page_by_path("メールアドレス", OBJECT, "contact");
+                $postContent = get_post_field('post_content', $pageInfo->ID);
                 echo wp_strip_all_tags($postContent);
               ?></p>
             <div class="sns-icons">
@@ -273,28 +275,29 @@
   <!-- 記事ページモーダル部分 -->
   <?php
     foreach($articles->posts as $post){
-      echo '<script>console.log(' . json_encode($post) . ');</script>';
+      // echo '<script>console.log(' . json_encode($post) . ');</script>';
 
       echo "<div class='modal micromodal-slide' id='$post->ID' aria-hidden='true'>
         <div class='modal__overlay' tabindex='-1' data-micromodal-close>
           <div class='postmodal__container' role='dialog' aria-modal='true' aria-labelledby='modal-2-title'>
             <div class='post-header-container'>
               <div class='post-header'>
-                <div class='post-date'>" . date("Y-m-d", strtotime($post->post_date)) . "</div>
                 <div class='post-date'>$post->post_title</div>
               </div>
             </div>
             <div class='post-content'>
-              $post->post_content
+              ".apply_filters('the_content', $post->post_content)."
             </div>
           </div>
         </div>
       </div>";
     };
   ?>
+
+  <!-- お仕事記事モーダル -->
   <?php
     foreach($work_articles->posts as $post){
-      echo '<script>console.log(' . json_encode($post) . ');</script>';
+      // echo '<script>console.log(' . json_encode($post) . ');</script>';
 
       echo "<div class='modal micromodal-slide' id='$post->ID' aria-hidden='true'>
         <div class='modal__overlay' tabindex='-1' data-micromodal-close>
@@ -306,7 +309,7 @@
               </div>
             </div>
             <div class='post-content'>
-              $post->post_content
+              ".apply_filters('the_content', $post->post_content)."
             </div>
           </div>
         </div>
@@ -319,10 +322,11 @@
     <div class="modal__overlay" tabindex="-1" data-micromodal-close>
       <div class="attentionmodal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
         <h2>ご依頼時の注意事項</h2>
+        <!-- <p>依頼をご検討いただきありがとうございます。<p> -->
         <div class="attention-text">
           <?php 
-            $targetID = 160;
-            $postContent = get_post_field('post_content', $targetID);
+            $pageInfo = get_page_by_path("依頼注意事項編集", OBJECT, "contact");
+            $postContent = get_post_field('post_content', $pageInfo->ID);
             echo $postContent;
           ?>
         </div>

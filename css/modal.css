@@ -49,10 +49,11 @@
   justify-content: center;
   font-family: 'Kiwi Maru', serif;
   color: #AAB8C9;
-  background-color: #F0F4F6;
+  background-color: #fff;
   border-radius: 10px;
   overflow: auto;
   text-align: center;
+  font-size: 18px;
 }
 
 .attentionmodal__container h2 {
@@ -61,13 +62,19 @@
   font-size: 20px;
   font-weight: bold;
   border-bottom: 1px solid;
+  margin-bottom: 30px;
 }
 
 .attention-text {
-  padding: 20px 0;
+  margin: 0 auto;
+  padding: 30px;
 }
 
-.attention-text li {}
+.attention-text ul {
+  list-style: square;
+  text-align: left;
+}
+
 
 .postmodal__container img {
   max-width: 60%;
@@ -85,7 +92,7 @@
 }
 
 .modal__container img {
-  max-width: 100%;
+  max-width: 70%;
   max-height: 100%;
   border: 10px solid #fff;
   border-radius: 10px;
