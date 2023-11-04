@@ -8,30 +8,31 @@
           <li>うおおおおおおお</li>
         </ul>
       </div>
-      <div class="masonry-box">
-        <ul id="target" class="grid">
-          <!-- メディアの一覧を取得するコード -->
-          <?php
-            $args = array(
-              'post_status' => 'any',
-              'posts_per_page' => -1,
-              'post_type' => 'attachment',
-              'tax_query' => array(
-                array(
-                  'taxonomy' => 'attachment_category', // カテゴリから検索
-                  'field' => 'slug', // カテゴリのslugから検索
-                  'terms' => 'original'
-                ),
-                
-              )
-            );
-            $media_files = new WP_Query($args);
-            foreach($media_files->posts as $post){
-              echo "<li data-micromodal-trigger='modal-1' class='masonry-item'><img class='masonry-img' src='$post->guid'></li>";
-            }
-          ?>
-
-        </ul>
+      <div class="masonry">
+        <!-- メディアの一覧を取得するコード -->
+        <?php
+          $args = array(
+            'post_status' => 'any',
+            'posts_per_page' => -1,
+            'post_type' => 'attachment',
+            'tax_query' => array(
+              array(
+                'taxonomy' => 'attachment_category', // カテゴリから検索
+                'field' => 'slug', // カテゴリのslugから検索
+                'terms' => 'original'
+              ),
+              
+            )
+          );
+          $media_files = new WP_Query($args);
+          foreach($media_files->posts as $post){
+            echo "
+              <div class='masonry-item'>
+                <img data-micromodal-trigger='modal-1' class='thumb' src='$post->guid'>
+              </div>
+            ";
+          }
+        ?>
       </div>
     </div>
     <!-- <div class="grid">

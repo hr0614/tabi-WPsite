@@ -5,8 +5,6 @@
   <script src="<?php bloginfo('template_url');?>/js/gallery.js"></script>
   <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
   <script src="<?php bloginfo('template_url');?>/js/modal.js"></script>
-  <!-- Masonryのjs -->
-  <script src="<?php bloginfo('template_url');?>/js/masonry.js" type="text/javascript"></script>
   
   <!-- <script>
     MicroModal.init();

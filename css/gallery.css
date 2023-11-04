@@ -1,35 +1,15 @@
-.masonry-box img {
-  width: 200px;
-  height: auto;
-}
-.masonry-box li {
-  display: inline-block;
-}
-
-.grid {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-auto-rows: 100px;
-}
-
-.item {
-  background-color: #ffffff;
-  padding: 20px;
-  color: #ffffff;
-  text-align: center;
-  background-color: #607D8B;
+.masonry {
+  -moz-column-count: 3;
+       column-count: 3;
 }
 
 .masonry-item {
-  padding: 10px;
-  text-align: center;
+  display: inline-block;
+  padding: 8px;
+  width: 100%;
+  background-color: #607D8B;
 }
 
-.masonry-item.is-h-2 {
-  grid-row-end: span 2;
-}
-
-.masonry-item.is-h-3 {
-  grid-row-end: span 3;
+.thumb {
+  width: 100%;
 }/*# sourceMappingURL=gallery.css.map */
