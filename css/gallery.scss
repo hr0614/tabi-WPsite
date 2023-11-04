@@ -1,9 +1,12 @@
-.masonry-box img {
-  width: 200px;
-  height: auto;
-}
-.masonry-box li {
-  display: inline-block;
+.masonry-box {
+  img {
+    width: 200px;
+    height: auto;
+  }
+
+  li {
+    display: inline-block;
+  }
 }
 
 .grid {
@@ -22,8 +25,11 @@
 }
 
 .masonry-item {
+  // background-color: #ffffff;
   padding: 10px;
+  // color: #ffffff;
   text-align: center;
+  // background-color: #607D8B;
 }
 
 .masonry-item.is-h-2 {
@@ -32,4 +38,4 @@
 
 .masonry-item.is-h-3 {
   grid-row-end: span 3;
-}/*# sourceMappingURL=gallery.css.map */
+}
