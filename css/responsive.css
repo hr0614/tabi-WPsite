@@ -72,4 +72,8 @@
   .post-contents {
     font-size: 15px;
   }
+  .masonry {
+    -moz-column-count: 2;
+         column-count: 2;
+  }
 }/*# sourceMappingURL=responsive.css.map */

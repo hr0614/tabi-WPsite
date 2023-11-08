@@ -32,7 +32,7 @@ function PageTopAnime() {
     $('#to-top-button').css('bottom', pos);	//#to-top-buttonに上記の値をCSSのbottomに直接指定してフッター手前で止まるようにする
   } else {//それ以外は
     if ($('#to-top-button').hasClass('UpMove')) {//UpMoveというクラス名がついていたら
-      $('#to-top-button').css('bottom', '10px');// 下から10pxの位置にページリンクを指定
+      $('#to-top-button').css('bottom', '20px');// 下から10pxの位置にページリンクを指定
     }
   }
 }

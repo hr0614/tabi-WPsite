@@ -185,13 +185,27 @@ Version: 1.0 */
   width: 140px;
   position: absolute;
   font-family: "Bad Script", cursive;
-  color: #afc1d2;
-  font-size: 25px;
+  color: #aebdca;
+  font-size: 24px;
   bottom: 40px;
   right: 0px;
   text-decoration-style: dotted;
+  text-align: right;
 }
 .contents-wrapper .more-icon:hover {
+  opacity: 0.5;
+}
+
+.back-link {
+  width: 140px;
+  padding-bottom: 20px;
+  font-family: "Bad Script", cursive;
+  color: #aebdca;
+  font-size: 24px;
+  text-decoration-style: dotted;
+  text-align: left;
+}
+.back-link:hover {
   opacity: 0.5;
 }
 

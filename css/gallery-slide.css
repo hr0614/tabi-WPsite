@@ -8,6 +8,10 @@
   padding-bottom: 40px;
 }
 
+#original .slifeshow {
+  padding-bottom: 60px;
+}
+
 .slider {
   /*横幅94%で左右に余白を持たせて中央寄せ*/
   width: 94%;

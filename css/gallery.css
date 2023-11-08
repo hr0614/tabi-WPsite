@@ -1,3 +1,18 @@
+@charset "UTF-8";
+#gallery-wrapper {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .masonry {
   -moz-column-count: 3;
        column-count: 3;
@@ -6,10 +21,64 @@
 .masonry-item {
   display: inline-block;
   padding: 8px;
-  width: 100%;
-  background-color: #607D8B;
 }
 
 .thumb {
   width: 100%;
+  border-radius: 10px;
+  box-shadow: 1px 3px 3px #c3d0d6;
+  transition-duration: 0.5s;
+}
+.thumb:hover {
+  opacity: 0.5;
+  /*透明度*/
+}
+
+.tab-001 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 8px;
+}
+
+.tab-001 > label {
+  flex: 1 1;
+  order: -1;
+  padding: 0.7em 1em 0.5em;
+  border-bottom: 1px solid #f6f6f6;
+  border-radius: 5px 5px 0 0;
+  background-color: #f6f6f6;
+  font-family: "Kiwi Maru", serif;
+  color: #d1d4d9;
+  font-size: 1.2em;
+  text-align: center;
+  cursor: pointer;
+}
+.tab-001 > label:hover {
+  opacity: 0.5;
+}
+
+.tab-001 input {
+  display: none;
+}
+
+.tab-001 > div {
+  display: none;
+  width: 100%;
+  padding: 1.5em 1em;
+  background-color: #eef2f4;
+  border-radius: 0 0 5px 5px;
+}
+
+.tab-001 label:has(:checked) {
+  background-color: #eef2f4;
+  border-color: #eef2f4;
+  border-style: solid;
+  color: #AAB8C9;
+}
+.tab-001 label:has(:checked):hover {
+  opacity: 1;
+}
+
+.tab-001 label:has(:checked) + div {
+  display: block;
 }/*# sourceMappingURL=gallery.css.map */

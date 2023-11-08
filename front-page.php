@@ -140,7 +140,7 @@
             </ul>
           </div>
         </div>
-        <a class="more-icon" href="/gallery">More >></a>
+        <a class="more-icon" href="/gallery?tab=original">Gallery >></a>
       </div>
 
       <!-- お仕事イラスト -->
@@ -180,7 +180,7 @@
             </ul>
           </div>
         </div>
-        <a class="more-icon" href="/gallery">More >></a>
+        <a class="more-icon" href="/gallery?tab=work">Gallery >></a>
         <!-- お仕事履歴 -->
         <div class="works-list">
           <div>
@@ -261,7 +261,7 @@
     </div>
     <!-- topへ戻るボタン -->
     <footer id="footer"><!--footerの手前で止まるようにする-->
-      <p id="to-top-button"><a href="#page-top">TOP</a></p>
+      <p id="to-top-button"><a href="#page-top"><i class="fa-solid fa-chevron-up"></i></a></p>
     </footer>
   </div>
   <!-- ギャラリーモーダル部分 -->

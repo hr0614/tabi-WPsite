@@ -1,15 +1,13 @@
-// const scrollAddClass = () => {
-//   const scrollEffect = document.querySelectorAll(".menu-list");
-//   let windowHeight = window.innerHeight;
-//   for (let i = 0; i < scrollEffect.length; i++) {
-//     target = scrollEffect[i].getBoundingClientRect().top;
-//     if (target < -50 || target > windowHeight) {
-//       scrollEffect[i].classList.remove("active");
-//     }
-//     else if (target < windowHeight) {
-//       scrollEffect[i].classList.add("active");
-//     }
-//   }
-// };
-// document.addEventListener("scroll", scrollAddClass);
+document.addEventListener('DOMContentLoaded', function () {
+  const url = new URL(window.location.href);
+  const tabValue = url.searchParams.get("tab");
 
+  if (tabValue) {
+    const radioElement = document.getElementById(tabValue);
+    if (radioElement) {
+      radioElement.checked = true;
+    }
+  }
+  const galleryWrapper = document.getElementById("gallery-wrapper");
+  galleryWrapper.style.animationName = "fadeInAnime";
+});
