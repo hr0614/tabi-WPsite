@@ -21,11 +21,19 @@
 }
 
 .modal__container {
-  width: 90%;
-  height: 90%;
+  width: 80%;
+  height: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+
+.modal__container p {
+  padding: 10px 0;
+  font-family: 'Kiwi Maru', serif;
+  font-weight: 300;
+  color: white;
 }
 
 .postmodal__container {
@@ -33,28 +41,32 @@
   height: 70%;
   padding: 50px;
   align-items: center;
+  line-height: 1.4;
   justify-content: center;
   font-family: 'Kiwi Maru', serif;
-  color: #AAB8C9;
-  background-color: #F0F4F6;
+  font-weight: 300;
+  color: #8c9caf;
+  background-color: #f3f7f9;
   border-radius: 10px;
   overflow: auto;
 }
 
 .attentionmodal__container {
   width: 60%;
-  height: 70%;
+  max-height: 70%;
   padding: 50px;
   align-items: center;
   justify-content: center;
   font-family: 'Kiwi Maru', serif;
-  color: #AAB8C9;
+  font-weight: 300;
+  color: #8c9caf;
   background-color: #fff;
   border-radius: 10px;
   overflow: auto;
   text-align: center;
   font-size: 18px;
 }
+
 
 .attentionmodal__container h2 {
   display: inline;
@@ -83,7 +95,7 @@
 
 .post-header {
   font-weight: bold;
-  border-bottom: 1px solid;
+  /* border-bottom: 1px solid; */
   padding-bottom: 5px;
   margin: 15px 0px;
   display: block;
@@ -108,7 +120,7 @@
   .postmodal__container {
     padding: 20px;
     width: 80%;
-    height: 50%;
+    height: 65%;
     font-size: 15px;
   }
 

@@ -11,8 +11,19 @@ Version: 1.0 */
     opacity: 1;
   }
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #e8e8e8;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c4cdd0;
+}
+
 .layout-wrapper {
-  height: calc(100vh - 200px);
   background-color: #ffffff;
 }
 
@@ -35,16 +46,26 @@ Version: 1.0 */
   position: absolute;
   bottom: 0;
   z-index: 10;
-  background-image: linear-gradient(180deg, transparent 0 75%, #FFF 100%);
+  background-image: linear-gradient(180deg, transparent 0 84%, #FFF 100%);
+}
+
+a {
+  color: #586474;
+}
+a:hover {
+  opacity: 0.5;
+}
+a:focus-visible {
+  outline: none;
 }
 
 .contents-wrapper {
   width: 80%;
   margin: 0 auto;
-  padding: 50px 0;
+  padding-top: 50px 0;
 }
 .contents-wrapper .contents-box {
-  color: #AAB8C9;
+  color: #8c9caf;
   padding: 30px 0;
   position: relative;
 }
@@ -59,8 +80,10 @@ Version: 1.0 */
 .contents-wrapper .contents-box h4 {
   font-size: 20px;
   font-family: "Kiwi Maru", serif;
+  font-weight: 300;
   display: inline-block;
-  border-bottom: 2px dotted #AAB8C9;
+  border-bottom: 2px dotted;
+  color: #8c9caf;
 }
 .contents-wrapper .contents-box h4 span {
   font-size: 18px;
@@ -71,7 +94,7 @@ Version: 1.0 */
 .contents-wrapper .contents-box .works-illust .works-items {
   position: relative;
 }
-.contents-wrapper .contents-box .works-illust .works-items .works-deta {
+.contents-wrapper .contents-box .works-illust .works-items .works-data {
   width: calc(100% - 10px);
   position: absolute;
   bottom: 0px;
@@ -80,6 +103,7 @@ Version: 1.0 */
   border-radius: 0 0 10px 10px;
   font-size: 14px;
   font-family: "Kiwi Maru", serif;
+  font-weight: 300;
   padding: 5px;
 }
 .contents-wrapper .contents-box .works-list {
@@ -121,17 +145,17 @@ Version: 1.0 */
   /*本文*/
   height: 0;
   margin-bottom: 10px;
-  padding: 0 20px;
+  padding: 0 15px;
   overflow: hidden;
 }
 .contents-wrapper .contents-box .works-list .post-list {
-  height: 150px;
+  max-height: 150px;
   overflow: auto;
 }
 .contents-wrapper .contents-box .works-list .toggle:checked + .Label + .content {
   /*開閉時*/
   height: auto;
-  padding: 20px;
+  padding: 15px;
   transition: all 0.3s;
 }
 .contents-wrapper .contents-box .works-list .toggle:checked + .Label {
@@ -188,7 +212,7 @@ Version: 1.0 */
   color: #aebdca;
   font-size: 24px;
   bottom: 40px;
-  right: 0px;
+  right: 15px;
   text-decoration-style: dotted;
   text-align: right;
 }
@@ -218,6 +242,10 @@ Version: 1.0 */
   opacity: 0.5;
 }
 
+.content-text.info-list {
+  align-items: baseline;
+}
+
 .contents-text {
   padding: 60px 40px 60px 40px;
   background-color: #F0F4F6;
@@ -232,6 +260,7 @@ Version: 1.0 */
   font-size: 30px;
   font-weight: bold;
   font-family: "Kiwi Maru", serif;
+  font-weight: 300;
   line-height: 1.8;
   text-align: left;
 }
@@ -239,23 +268,26 @@ Version: 1.0 */
   font-size: 18px;
   font-weight: bold;
   font-family: "Kiwi Maru", serif;
+  font-weight: 300;
   line-height: 1.8;
   text-align: left;
 }
 .contents-text li {
   font-size: 18px;
   font-family: "Kiwi Maru", serif;
+  font-weight: 300;
   line-height: 1.2;
   margin-bottom: 10px;
 }
 .contents-text a {
   text-decoration: none;
-  color: #AAB8C9;
+  color: #8c9caf;
 }
 
 .content {
   padding: 20px 0;
   font-family: "Kiwi Maru", serif;
+  font-weight: 300;
 }
 .content li {
   margin-bottom: 10px;
@@ -265,10 +297,10 @@ Version: 1.0 */
 
 .post-container {
   margin: 30px 0;
-  padding: 30px 40px;
   background-color: #F0F4F6;
   font-family: "Kiwi Maru", serif;
-  line-height: 1.8;
+  font-weight: 300;
+  line-height: 1.4;
   text-align: left;
 }
 .post-container img {
@@ -287,8 +319,8 @@ Version: 1.0 */
 }
 
 .post-border {
-  border-bottom: solid 1px;
-  margin: 10px 0;
+  border-bottom: 0.9px solid;
+  margin: 2px 0;
 }
 
 #information li:hover {
@@ -302,15 +334,53 @@ Version: 1.0 */
   align-items: center;
   justify-content: center;
   font-family: "Kiwi Maru", serif;
-  color: #AAB8C9;
+  font-weight: 300;
+  color: #8c9caf;
   background-color: #F0F4F6;
 }
 
 .post-date {
   display: inline-block;
   margin-right: 10px;
+  font-size: 18px;
+  font-weight: 300;
 }
 
 .post-title {
   display: inline-block;
+}
+
+.post-container {
+  padding: 10px 20px;
+}
+.post-container img {
+  max-width: 60%;
+  padding: 15px 0px;
+}
+
+.post-header {
+  border-bottom: 1px solid;
+}
+.post-header .post-date {
+  font-size: 22px;
+  font-weight: 500;
+}
+.post-header .post-time {
+  font-size: 14px;
+  opacity: 0.5;
+  font-weight: 300;
+}
+
+.copyright-text {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 15px;
+  font-size: 13px;
+  color: #bbcbd9;
+  padding-bottom: 20px;
+}
+
+.wp-block-embed__wrapper {
+  padding: 15px 0;
 }/*# sourceMappingURL=style.css.map */

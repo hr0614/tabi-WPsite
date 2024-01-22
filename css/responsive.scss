@@ -4,6 +4,10 @@
       height: auto;
       width: 100%;
     }
+
+    .white-gradation {
+      bottom: -1px;
+    }
   }
 
   #nav-toggle {
@@ -49,15 +53,35 @@
     transform: rotate(-45deg);
   }
 
-  .contents-wrapper {
-    width: 90%;
+  .info-wrapper {
+    width: 95%;
 
     .contents-box {
-      // padding: 30px 0;
-      // コンテンツタイトル文字
 
       h2 {
-        font-size: 38px;
+        font-size: 36px;
+        padding: 20px 0;
+        margin-bottom: 22px;
+      }
+
+
+
+    }
+  }
+
+  .content {
+    li {
+      font-size: 14px;
+    }
+  }
+
+  .contents-wrapper {
+    width: 95%;
+
+    .contents-box {
+
+      h2 {
+        font-size: 36px;
         padding: 20px 0;
         margin-bottom: 22px;
       }
@@ -67,7 +91,7 @@
         flex-flow: column;
 
         h3 {
-          font-size: 25px;
+          font-size: 22px;
           text-align: center;
         }
 
@@ -77,28 +101,63 @@
         }
 
         p {
-          font-size: 15px;
+          font-size: 13px;
           font-weight: bold;
           font-family: 'Kiwi Maru', serif;
+          font-weight: 300;
           text-align: left;
         }
 
         li {
-          font-size: 13px;
+          font-size: 12px;
           font-family: 'Kiwi Maru', serif;
+          font-weight: 300;
 
         }
 
 
 
         .mail {
-          font-size: 16px;
+          font-size: 15px;
         }
 
 
       }
+
+      .contents-text.info-list {
+        flex-flow: unset;
+      }
+
+      .works-illust {
+        .works-items {
+          .works-deta {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .contact-text {
+        .attention {
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .more-icon {
+      font-size: 20px;
     }
   }
+
+  .content {
+    li {
+      font-size: 14px;
+    }
+  }
+
+
+
 
   #work {
     .more-icon {
@@ -108,11 +167,50 @@
   }
 
 
-  .post-contents {
-    font-size: 15px;
+  .post-content {
+    // font-size: 14px;
+
+    p {
+      font-size: 13px;
+    }
+  }
+
+  .post-date {
+    font-size: 13px;
+  }
+
+  .post-header {
+    .post-date {
+      font-size: 15px;
+    }
+
+    .post-time {
+      font-size: 12px;
+    }
   }
 
   .masonry {
     column-count: 2;
+  }
+
+  .tab-002>label {
+    padding: 0.6em 1em 0.5em;
+    font-size: 1em;
+  }
+
+
+  .attentionmodal__container {
+    width: 85%;
+    padding: 30px 10px 30px 10px;
+    font-size: 13px;
+  }
+
+  .attention-text {
+    padding: 15px;
+  }
+
+  .copyright-text {
+    width: 95%;
+    font-size: 10px;
   }
 }

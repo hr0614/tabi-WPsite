@@ -11,3 +11,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const galleryWrapper = document.getElementById("gallery-wrapper");
   galleryWrapper.style.animationName = "fadeInAnime";
 });
+
+window.onload = function () {
+  const spinner = document.getElementById('loading');
+  spinner.classList.add('loaded');
+}

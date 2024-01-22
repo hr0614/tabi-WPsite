@@ -13,6 +13,69 @@
     opacity: 1;
   }
 }
+.info-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  color: #8c9caf;
+  padding: 20px 0 20px 0;
+}
+.info-wrapper h2 {
+  font-family: "Bad Script", cursive;
+  font-size: 48px;
+  text-align: center;
+  border-bottom: 2px solid;
+  padding: 20px 0;
+  margin-bottom: 32px;
+}
+.info-wrapper h4 {
+  font-size: 20px;
+  font-family: "Kiwi Maru", serif;
+  font-weight: 300;
+  display: inline-block;
+  border-bottom: 2px dotted;
+  color: #8c9caf;
+}
+.info-wrapper h4 .contents-box {
+  color: #8c9caf;
+  padding: 30px 0;
+  position: relative;
+}
+
+#loading {
+  width: 100%;
+  height: 100%;
+  transition: all 1s;
+  background-color: #eef2f4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  margin: 200px auto;
+  background-color: #fff;
+  border-radius: 100%;
+  animation: sk-scaleout 1s infinite ease-in-out;
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* ローディングアニメーション */
+@keyframes sk-scaleout {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
 .masonry {
   -moz-column-count: 3;
        column-count: 3;
@@ -48,6 +111,7 @@
   border-radius: 5px 5px 0 0;
   background-color: #f6f6f6;
   font-family: "Kiwi Maru", serif;
+  font-weight: 300;
   color: #d1d4d9;
   font-size: 1.2em;
   text-align: center;
@@ -80,5 +144,58 @@
 }
 
 .tab-001 label:has(:checked) + div {
+  display: block;
+}
+
+.tab-002 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 8px;
+}
+.tab-002 .post-content {
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+
+.tab-002 > label {
+  flex: 1 1;
+  order: -1;
+  padding: 0.7em 1em 0.5em;
+  border-bottom: 1px solid #f6f6f6;
+  border-radius: 5px 5px 0 0;
+  background-color: #f6f6f6;
+  font-family: "Kiwi Maru", serif;
+  font-weight: 300;
+  color: #d1d4d9;
+  font-size: 1.2em;
+  text-align: center;
+  cursor: pointer;
+}
+.tab-002 > label:hover {
+  opacity: 0.5;
+}
+
+.tab-002 input {
+  display: none;
+}
+
+.tab-002 > div {
+  display: none;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 0 0 5px 5px;
+}
+
+.tab-002 label:has(:checked) {
+  background-color: #F0F4F6;
+  border-color: #F0F4F6;
+  border-style: solid;
+  color: #AAB8C9;
+}
+.tab-002 label:has(:checked):hover {
+  opacity: 1;
+}
+
+.tab-002 label:has(:checked) + div {
   display: block;
 }/*# sourceMappingURL=gallery.css.map */
