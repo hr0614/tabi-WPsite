@@ -81,7 +81,7 @@ a {
 
   .contents-box {
     color: #8c9caf;
-    padding: 30px 0;
+    padding: 45px 0;
     position: relative;
 
     // コンテンツタイトル文字
@@ -109,9 +109,9 @@ a {
     }
 
     // イラストコンテンツここから
-    .original-illust {
-      padding-bottom: 20px;
-    }
+    // .original-illust {
+    //   padding-bottom: 20px;
+    // }
 
     .works-illust {
 
@@ -136,7 +136,7 @@ a {
 
     // お仕事履歴ここから
     .works-list {
-      margin-top: 60px;
+      margin-top: 30px;
 
       .list-wrapper {
         padding-top: 15px;
@@ -244,22 +244,7 @@ a {
 
       }
 
-      // ご依頼についてのバナー部分
-      // .image-box {
-      //   position: relative;
-      //   display: flex;
-      //   justify-content: center;
-      //   margin-top: 20px;
 
-      //   img {
-      //     width: 200px;
-      //   }
-
-      //   .on-text {
-      //     position: absolute;
-      //     top: 50%;
-      //   }
-      // }
     }
 
     // コンタクトSNSアイコン
@@ -281,24 +266,27 @@ a {
 
   }
 
-
-
   .more-icon {
-    width: 140px;
-    position: absolute;
     font-family: 'Bad Script', cursive;
     color: #aebdca;
     font-size: 24px;
-    bottom: 40px;
-    right: 15px;
+    display: block;
+    margin-top: 10px;
     text-decoration-style: dotted;
     text-align: right;
+    margin: 0;
 
 
     &:hover {
       opacity: 0.5;
     }
   }
+
+  // #information {
+  //   margin-bottom: 40px;
+  // }
+
+
 }
 
 .back-link {
@@ -328,9 +316,9 @@ a {
   }
 }
 
-.content-text.info-list {
-  align-items: baseline;
-}
+// .content-text.info-list {
+//   align-items: baseline;
+// }
 
 .contents-text {
   padding: 60px 40px 60px 40px;
@@ -415,6 +403,79 @@ a {
 .post-contents {
   display: inline;
   cursor: pointer;
+}
+
+.info-list ul {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.info-list li {
+  font-family: 'Kiwi Maru', serif;
+  font-weight: 100;
+  width: 200px;
+  // max-width: 230px;
+  max-height: 280px;
+  background-color: #fff;
+  box-shadow: 0px 1px 5px #beccdc;
+  margin-left: 35px;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+
+  .post-title {
+    font-size: 17px;
+    height: 55px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  .post-date {
+    font-size: 14px;
+    text-align: right;
+    display: block;
+    margin: 0;
+  }
+
+  .post-label {
+    width: 85px;
+    height: 30px;
+    // background-color: rgb(135, 187, 217);
+    font-size: 14px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 20;
+    left: -15px;
+    bottom: 10px;
+  }
+
+  .blue {
+    background-color: rgb(135, 187, 217);
+  }
+
+  .red {
+    background-color: rgb(230, 116, 116);
+  }
+
+  .yellow {
+    background-color: rgb(255 227 91);
+  }
+
+}
+
+
+.info-items img {
+  width: 200px;
+
 }
 
 .post-border {

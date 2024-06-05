@@ -72,10 +72,25 @@
               'after'=>'2024/1/5' 
             ),
           ),
-          'posts_per_page' => 5 ,
+          'posts_per_page' => 4 ,
         );
         $articles = new WP_Query($args);
         echo '<script>console.log(' . json_encode($articles) . ');</script>';
+      ?>
+      <?php
+        $args = array(
+          'post_type' => 'attachment',
+          'post_status'=>'inherit',
+          'date_query' => array(
+            array(
+              'inclusive'=>true,
+              'after'=>'2024/1/5' 
+            ),
+          ),
+          'posts_per_page' => 4 ,
+        );
+        $attachments = new WP_Query($args);
+        echo '<script>console.log(' . json_encode($attachments) . ');</script>';
       ?>
 
       <?php
@@ -85,28 +100,46 @@
           'category_name' => 'work'
         );
         $work_articles = new WP_Query($args);
+        // echo '<script>console.log(' . json_encode($articles) . ');</script>';
       ?>
 
       <!-- infoリスト -->
       <div id="information" class="contents-box">
         <h2>Information</h2>
-        <div class="contents-text info-list">
+        <div class="info-list">
           <ul>
-          <?php
+          <?php 
             foreach($articles-> posts as $post){
-              echo "<li data-micromodal-trigger='$post->ID'>
-                  <div class='post-contents' >
-                    <div class='post-date'>" . date("Y-m-d", strtotime($post->post_date)) . "</div>
-                    <div class='post-title'>$post->post_title</div>
-                  </div>
-                  <div class='post-border'></div>
-                </li>";
+              $categories= get_the_category();
+              $category_name = $categories[0]->name;
+              $category_slug = $categories[0]->slug;
+              $post_thumbnail = get_the_post_thumbnail_url();
+              // echo '<script>console.log(' . json_encode($image) . ');</script>';
+              if($category_slug === 'work'){
+                $cat_color = 'red';
+              }
+              elseif($category_slug === 'info'){
+                $cat_color = 'blue';
+              }
+              else {
+                $cat_color = 'yellow';
+              }
+              $uri = get_template_directory_uri();
+              $image_url = $post_thumbnail === false ? $uri . "/img/info/infosample.jpg" : $post_thumbnail;
+              echo "<li class='info-items' data-micromodal-trigger='$post->ID'>
+                <img class='post-img' src='$image_url'>
+                <div class='post-title'>$post->post_title</div>
+                <div class='post-date'>". date("Y-m-d", strtotime($post->post_date)) . "</div>
+                <div class='post-label $cat_color'>$category_name</div>
+              </li>";
             }
           ?>
           </ul>
+          
         </div>
-        
         <a class="more-icon" href="/information">More >></a>
+        
+        
         
       </div>
 
