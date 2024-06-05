@@ -227,3 +227,20 @@
 .tab-002 label:has(:checked)+div {
   display: block;
 }
+
+.pagination {
+  display: flex;
+  justify-content: right;
+  margin: 15px 0;
+
+  a {
+    text-decoration: none;
+    color: #abb5c1;
+    padding: 0 5px;
+  }
+
+  span {
+    padding: 0 5px;
+    font-weight: bold;
+  }
+}

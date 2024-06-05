@@ -3,7 +3,7 @@
   <?php
     $args = array(
       'post_type' => 'post',
-      'posts_per_page' => -1,
+      'posts_per_page' => 5,
       'date_query' => array(
         array(
           'inclusive'=>true,
@@ -17,7 +17,7 @@
   <?php
     $args = array(
       'post_type' => 'post',
-      'posts_per_page' => -1,
+      'posts_per_page' => 10,
       'category_name' => 'info'
     );
     $info_articles = new WP_Query($args);
@@ -26,7 +26,7 @@
   <?php
     $args = array(
       'post_type' => 'post',
-      'posts_per_page' => -1,
+      'posts_per_page' => 10,
       'category_name' => 'work'
     );
     $work_articles = new WP_Query($args);
@@ -61,6 +61,19 @@
                   </div>";
               };
             ?>
+            <div class="pagination">
+              <?php
+                if ($articles->max_num_pages > 1) {
+                  echo paginate_links(array(
+                      'base' => get_pagenum_link() .  '%_%',
+                      'format' => 'page/%#%/',
+                      'current' => $paged,
+                      'total' => $articles->max_num_pages,
+                      'end_size' => '5'
+                  ));
+                }
+              ?>
+            </div>
           </div>
           <label>
             <input type="radio" name="tab-002">
